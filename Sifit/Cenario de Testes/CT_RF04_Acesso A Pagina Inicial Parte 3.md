@@ -1,7 +1,8 @@
 ---
 # Cenário de Teste: Página Inicial Parte 3
-
+---
 ### Caso de Teste 01: Ações Recomendadas - Falar com Alunos Inativos
+
 
 | ID | Descrição |
 | --- | --- |
