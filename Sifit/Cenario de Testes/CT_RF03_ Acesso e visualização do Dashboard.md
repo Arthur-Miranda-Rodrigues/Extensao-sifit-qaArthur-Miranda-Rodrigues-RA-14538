@@ -2,7 +2,7 @@
 
 ---
 
-## Cenário 03: Acesso e visualização do Dashboard.
+# Cenário 03: Acesso e visualização do Dashboard.
 
 ### Caso de Teste 01: Acesso à tela de Dashboard.
 
