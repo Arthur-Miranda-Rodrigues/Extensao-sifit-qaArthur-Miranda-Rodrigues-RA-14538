@@ -1,110 +1,219 @@
-## Cenário de teste: Módulo Página Inicial (Dashboard / Home) parte 2.
-
-### Caso de Teste 01: Visualização dos Indicadores Principais (Cards de Resumo).
-
-| ID | Descrição |
-| --- | --- |
-| **C02-CT01** | Verificar se a página inicial exibe corretamente os cartões com os dados resumidos e consolidados do sistema (ex.: Total de Alunos, Avaliações Pendentes, Treinos Ativos, etc.). |
-
-| **Pré-condições** |
-| --- |
-| Utilizador autenticado com sucesso no sistema SIFIT. |
-
-| **Passos** |
-| --- |
-| **DADO** que o utilizador está autenticado no SIFIT |
-| **E** está posicionado na página Inicial / Dashboard |
-| **QUANDO** observar a área superior da página onde ficam situados os cards de métricas |
-| **ENTÃO** o sistema deve carregar todos os indicadores de contagem corretamente sem erros de leitura e com os totais condizentes com a base de dados |
-
-| **Critérios de aceitação** |
-| --- |
-| Os cards de contagem e indicadores principais devem exibir as informações consolidadas e corretas no painel inicial. |
-
-| **Evidência** |
-| --- |
-|    |
 
 ---
 
-### Caso de Teste 02: Navegação pelos Atalhos Rápidos da Página Inicial.
+# Cenário de Teste: Página Inicial Parte 2
+
+### Caso de Teste 01: Visualização do Detalhamento Financeiro (Mensalidades Pendentes / Em Aberto)
 
 | ID | Descrição |
 | --- | --- |
-| **C02-CT02** | Validar se os botões e atalhos rápidos presentes na página inicial direcionam o utilizador para as respetivas telas operacionais. |
+| **C02-CT01** | Verificar se o modal/painel de "Mensalidades pendentes / Financeiro em Aberto" abre corretamente ao clicar em "Ver detalhes" e se os filtros por período de vencimento funcionam adequadamente.
+
+ |
 
 | **Pré-condições** |
 | --- |
-| O utilizador deve estar visualizando a Página Inicial do sistema. |
+| Utilizador autenticado no sistema SIFIT e na Página Inicial.
+
+ |
 
 | **Passos** |
 | --- |
-| **DADO** que o utilizador está na Página Inicial |
-| **E** localiza os botões ou links de atalho rápido (ex.: *Cadastrar Aluno*, *Agendar Avaliação*, *Criar Treino*) |
-| **QUANDO** clicar em um dos atalhos disponíveis (ex.: *Agendar Avaliação*) |
-| **ENTÃO** o sistema deve redirecionar o utilizador para a tela correspondente ao atalho clicado de forma rápida e sem erros |
+| **DADO** que o utilizador está na Página Inicial
+
+ |
+| **E** visualiza o card/seção de "Mensalidades pendentes"
+
+ |
+| **QUANDO** clicar no link "Ver detalhes"
+
+ |
+| **E** alternar entre as abas de filtro do modal (ex.: *Todos*, *Vence hoje*, *Até 7 dias*, *8 a 15 dias*, *16 a 30 dias*, *> 30 dias*)
+
+ |
+| **ENTÃO** o sistema deve carregar e filtrar as mensalidades em aberto de acordo com a aba selecionada sem apresentar erros.
+
+ |
 
 | **Critérios de aceitação** |
 | --- |
-| Todos os botões de atalho rápido devem realizar o redirecionamento correto para as telas de destino. |
+| O modal de "Financeiro em Aberto" deve abrir com as métricas consolidadas e atualizar a listagem de registros ao alternar entre os filtros de período.
+
+ |
 
 | **Evidência** |
 | --- |
-|    |
+| https://drive.google.com/file/d/1wiOUZ76pRiST_obtsVMrF0Jdc8-PK7p9/view?usp=sharing |
 
 ---
 
-### Caso de Teste 03: Exibição da Agenda/Próximas Avaliações do Dia.
+### Caso de Teste 02: Consulta de Desistências no Período e Pesquisa de Alunos
 
 | ID | Descrição |
 | --- | --- |
-| **C02-CT03** | Garantir que o painel de agendamentos do dia/semana exibe corretamente os próximos alunos agendados. |
+| **C02-CT02** | Validar a exibição do modal de "Desistências no Período" ao clicar no card correspondente e testar a busca por nome ou código.
+
+ |
 
 | **Pré-condições** |
 | --- |
-| O utilizador deve estar na Página Inicial do sistema SIFIT. |
+| Utilizador autenticado na Página Inicial do SIFIT.
+
+ |
 
 | **Passos** |
 | --- |
-| **DADO** que o utilizador acedeu à Página Inicial |
-| **QUANDO** verificar a secção de **Próximas Avaliações** ou **Agenda do Dia** |
-| **ENTÃO** o sistema deve listar os nomes dos alunos, horários e status (ex.: *Pendente*, *Confirmado*) em ordem cronológica conforme a data atual |
+| **DADO** que o utilizador está no Dashboard principal
+
+ |
+| **QUANDO** clicar sobre o card de métrica "Desistências no Período"
+
+ |
+| **E** utilizar o campo de pesquisa "Buscar por nome ou código..." digitando um termo de busca
+
+ |
+| **ENTÃO** o modal deve exibir a contagem total e filtrar os registros do período conforme o termo inserido no campo de busca.
+
+ |
 
 | **Critérios de aceitação** |
 | --- |
-| A lista de agendamentos deve apresentar apenas os registros referentes ao período atual, ordenados cronologicamente por horário. |
+| O modal "Desistências no Período" deve abrir corretamente e o campo de busca deve filtrar em tempo real a tabela de desistências.
+
+ |
 
 | **Evidência** |
 | --- |
-|    |
+| https://drive.google.com/file/d/1dQK6_uOb5jDR4ysA8sum-bfzlHiZd2gz/view?usp=sharing |
 
 ---
 
-### Caso de Teste 04: Acesso e Responsividade do Menu Lateral / Superior.
+### Caso de Teste 03: Consulta e Filtragem de Matrículas no Período
 
 | ID | Descrição |
 | --- | --- |
-| **C02-CT04** | Validar o correto funcionamento e recolhimento do menu principal de navegação na Página Inicial. |
+| **C02-CT03** | Validar a abertura e o funcionamento da pesquisa no modal "Matrículas no Período" a partir do card do Dashboard.
+
+ |
 
 | **Pré-condições** |
 | --- |
-| O utilizador deve estar na Página Inicial do SIFIT. |
+| Utilizador autenticado na Página Inicial do SIFIT.
+
+ |
 
 | **Passos** |
 | --- |
-| **DADO** que o utilizador está na Página Inicial |
-| **E** clica no botão de alternar/recolher o menu (ícone de três barras / hambúrguer) |
-| **QUANDO** a área útil do dashboard for expandida |
-| **E** o utilizador clicar novamente para expandir o menu e selecionar um submenu (ex.: *Treinamento > Avaliações*) |
-| **ENTÃO** o menu deve alternar o estado de recolhimento suavemente e redirecionar para a funcionalidade selecionada |
+| **DADO** que o utilizador está na Página Inicial
+
+ |
+| **QUANDO** clicar no card de indicador "Matrículas no Período"
+
+ |
+| **E** digitar o nome ou código de um aluno no campo de busca do modal
+
+ |
+| **ENTÃO** o sistema deve atualizar a listagem de matrículas de acordo com o filtro aplicado.
+
+ |
 
 | **Critérios de aceitação** |
 | --- |
-| O menu principal deve recolher/expandir dinamicamente e manter a operabilidade de todos os seus links e submenus. |
+| A listagem de matrículas do período deve ser exibida no modal e responder corretamente ao filtro digitado.
+
+ |
 
 | **Evidência** |
 | --- |
-|    |
+| https://drive.google.com/file/d/1PDujs2EBZTBo_S1REIBVpLMEAJJQBpqJ/view?usp=sharing |
 
+---
 
-reformular  descrevendo os casos de teste de acordo com os vídeose  nomear de página  inicial parte 2
+### Caso de Teste 04: Visualização e Filtro da Listagem de Personais
+
+| ID | Descrição |
+| --- | --- |
+| **C02-CT04** | Verificar se a modalidade/card de "Personais" abre a lista de profissionais cadastrados e permite a busca individualizada.
+
+ |
+
+| **Pré-condições** |
+| --- |
+| Utilizador autenticado na Página Inicial do SIFIT.
+
+ |
+
+| **Passos** |
+| --- |
+| **DADO** que o utilizador está no Dashboard
+
+ |
+| **QUANDO** clicar no card de indicador "Personais"
+
+ |
+| **E** utilizar o campo de pesquisa para buscar um profissional pelo nome
+
+ |
+| **ENTÃO** o modal "Personais" deve exibir a lista de personal trainers cadastrados (com informações de dias sem visita e última visita) e filtrar os resultados com precisão.
+
+ |
+
+| **Critérios de aceitação** |
+| --- |
+| O modal de Personais deve apresentar o total de profissionais cadastrados/ativos e permitir a busca por texto.
+
+ |
+
+| **Evidência** |
+| --- |
+| https://drive.google.com/file/d/1-Qy_GsKdOtQ08zvxEGySzJaqNPfXkhTb/view?usp=sharing |
+
+---
+
+---
+
+### Caso de Teste 05: Detalhes da Agenda de Hoje, Filtros e Ações Rápidas em Aulas
+
+| ID | Descrição |
+| --- | --- |
+| **C02-CT05** | Validar a expansão do modal "Agenda de hoje" ao clicar em "Ver agenda", a busca por aulas, a seleção de unidades e a alteração dinâmica de detalhes ao selecionar aulas como *Turma dos Bodybuilders*, *Teste* e *Horario da manhã*, disponibilizando os botões de ações rápidas.
+
+ |
+
+| **Pré-condições** |
+| --- |
+| Utilizador autenticado no sistema SIFIT, posicionado na Página Inicial visualizando o painel "Agenda de hoje".
+
+ |
+
+| **Passos** |
+| --- |
+| **DADO** que o utilizador está na Página Inicial
+
+ |
+| **E** clica no link "Ver agenda" no canto superior do painel "Agenda de hoje"
+
+ |
+| **QUANDO** o modal "Agenda de hoje" for aberto
+
+ |
+| **E** o utilizador utilizar o campo "Buscar aula..." digitando um termo de pesquisa (ex.: "S") e em seguida limpando o campo
+
+ |
+| **E** navegar pelas opções na coluna "AULAS DO DIA", selecionando sucessivamente as turmas *Turma dos Bodybuilders*, *Teste* e *Horario da manhã*<br> |
+| **E** interagir com o filtro de unidade ("Todas as unidades" / "Unidade não informada")
+
+ |
+| **ENTÃO** o modal deve filtrar/atualizar a lista de aulas em tempo real e o painel de "Detalhes da aula" deve atualizar as informações de horário, duração, professor, lista de alunos agendados e exibir as ações rápidas (*Lista de alunos*, *Fazer check-in*, *Enviar lembrete*, *Cancelar aula*).
+
+ |
+
+| **Critérios de aceitação** |
+| --- |
+| A consulta e busca de aulas no modal devem responder corretamente, atualizando dinamicamente os detalhes e ações rápidas da aula selecionada na coluna lateral.
+
+ |
+
+| **Evidência** |
+| --- |
+| https://drive.google.com/file/d/18-fZsccI5UdnPHCNRzEgoWxFiRhV6Vtm/view?usp=sharing |
