@@ -7,7 +7,7 @@
 
 ### Caso de Teste 01: Agendamento de Avaliação através de Ações Rápidas no Perfil do Cliente
 
-| ID | Descrição |
+| ID  | Descrição |
 | --- | --- |
 | **C02-CT01** | Validar a abertura do modal "Cadastrar Avaliação" a partir do painel de Ações Rápidas, a busca/substituição do aluno, seleção do personal responsável, data e horário, finalizando com o salvamento da avaliação.
 
