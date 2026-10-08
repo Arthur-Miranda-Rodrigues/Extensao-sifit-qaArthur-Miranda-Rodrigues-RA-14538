@@ -1,13 +1,15 @@
 
 ---
 
-## Cenário de Teste: Página Inicial (Parte 4)
+# Cenário de Teste: Página Inicial (Parte 4)
+
+---
 
 ### Caso de Teste 01: Agendamento de Avaliação através de Ações Rápidas no Perfil do Cliente
 
 | ID | Descrição |
 | --- | --- |
-| **C02-CT01** | Validar a abertura do modal "Cadastrar Avaliação" a partir do painel de Ações Rápidas do perfil do cliente, selecionando personal responsável, data e horário.
+| **C02-CT01** | Validar a abertura do modal "Cadastrar Avaliação" a partir do painel de Ações Rápidas, a busca/substituição do aluno, seleção do personal responsável, data e horário, finalizando com o salvamento da avaliação.
 
  |
 
@@ -19,7 +21,7 @@
 
 | **Passos** |
 | --- |
-| **DADO** que o utilizador está na tela "Visualizar Cliente" do aluno selecionado
+| **DADO** que o utilizador está na tela "Visualizar Cliente"
 
  |
 | **E** localiza o painel lateral de "Ações rápidas"
@@ -28,26 +30,29 @@
 | **QUANDO** clicar no botão "Agendar avaliação"
 
  |
-| **E** o modal "Cadastrar Avaliação" for aberto preenchido com os dados do cliente
+| **E** o modal "Cadastrar Avaliação" for exibido
 
  |
-| **E** selecionar o personal responsável (ex.: *Gabriella*), definir a data (ex.: *02/10/2026*) e o horário (ex.: *07:30*)
+| **E** clicar no ícone de lupa do campo Aluno para abrir o modal "Buscar Aluno", pesquisando por "gabriel" e selecionando o aluno *Lurdes Gabriely*<br> |
+| **E** selecionar o personal responsável (*Santiago*), definir a data no calendário (*07/11/2026*) e o horário (*07:30*)
 
  |
-| **ENTÃO** o sistema deve carregar todos os dados do agendamento e habilitar o botão "Salvar" para confirmar o cadastro da avaliação.
+| **E** clicar no botão "Salvar"
+
+ |
+| **ENTÃO** o sistema deve processar o salvamento exibindo o status "Salvando...", fechar o modal e registrar a nova avaliação com sucesso.
 
  |
 
 | **Critérios de aceitação** |
 | --- |
-| O modal "Cadastrar Avaliação" deve abrir com o código/nome do aluno previamente preenchido e permitir a seleção do personal responsável, data e horário do agendamento.
+| O modal de cadastro deve permitir a busca e seleção de alunos, escolha de personal, definição de data e hora, salvando o agendamento sem erros.
 
  |
 
 | **Evidência** |
 | --- |
-| https://drive.google.com/file/d/11d78mIcTYM372jzaXTTHrfr4i9PaoG5E/view?usp=sharing |
-
+| https://drive.google.com/file/d/1bOxxxvyWiSd2v98E9CV09kWWGaZcb-uP/view?usp=sharing |
 ---
 
 ### Caso de Teste 02: Envio de Mensagens Rápidas pelo Painel da Inteligência do Cliente
@@ -172,7 +177,7 @@
 
 | **Evidência** |
 | --- |
-| https://drive.google.com/file/d/1SLv5Ko26qSyEh3UmKmzY3BckRuk0L-G0/view?usp=sharing |
+| https://drive.google.com/file/d/18LcPRchqIx72t9JlhbzcHGCt9nOnAEwR/view?usp=sharing |
 
 ---
 
@@ -216,4 +221,4 @@
 
 | **Evidência** |
 | --- |
-| https://drive.google.com/file/d/18LcPRchqIx72t9JlhbzcHGCt9nOnAEwR/view?usp=sharing |
+| https://drive.google.com/file/d/1yymsYl3R4H5fQGtBD38FZLjatE7A-PDk/view?usp=sharing |
