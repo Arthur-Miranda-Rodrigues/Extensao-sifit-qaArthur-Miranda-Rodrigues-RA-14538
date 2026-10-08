@@ -2,7 +2,7 @@
 
 ---
 
-# Cenário de teste: Login na plataforma.(RF01)
+# Cenário de teste: Login na plataforma.
 
 ### Caso de Teste 01: Login com as credenciais válidas.
 
