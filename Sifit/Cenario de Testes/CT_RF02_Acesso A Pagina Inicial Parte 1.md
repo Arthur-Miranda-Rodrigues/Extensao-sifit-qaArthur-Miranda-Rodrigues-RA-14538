@@ -51,6 +51,10 @@ Este documento especifica os casos de teste referentes ao **Requisito Funcional 
 | * A busca deve atualizar a lista de alunos em tempo real ou mediante confirmação.
 
  |
+ | **Evidência** |
+| --- |
+|  https://drive.google.com/file/d/1i4IfNOHijkgTu4uBFYjmlrA1_sEOwfZz/view?usp=sharing  |
+
 
 ---
 
@@ -84,6 +88,10 @@ Este documento especifica os casos de teste referentes ao **Requisito Funcional 
 | * O modal deve apresentar contadores de ausência e atalhos para ações de recuperação/contato via WhatsApp.
 
  |
+ | **Evidência** |
+| --- |
+|   https://drive.google.com/file/d/1bJuvOZ-WPyPUthbEcGnsdja2B_zy7vfq/view?usp=sharing |
+
 
 ---
 
@@ -117,6 +125,10 @@ Este documento especifica os casos de teste referentes ao **Requisito Funcional 
 | * O redirecionamento deve ocorrer sem erros e mantendo os parâmetros de filtro correspondentes ao card acionado.
 
  |
+  | **Evidência** |
+| --- |
+| https://drive.google.com/file/d/1iid5UaySagOawaHuNqJAWYu4i9AEGiZ0/view?usp=sharing |
+
 
 ---
 
@@ -150,6 +162,10 @@ Este documento especifica os casos de teste referentes ao **Requisito Funcional 
 | * Os cards financeiros superiores do modal (*Valor total em aberto*, *Horas para cobrança*, *Alunos*, *Cobrar todos no WhatsApp*, etc.) devem atualizar conforme o filtro de vencimento selecionado.
 
  |
+ | **Evidência** |
+| --- |
+|  https://drive.google.com/file/d/1xR2uFV7fjqiEjpHFMpbfZA9k6816h5w_/view?usp=sharing |
+
 
 ---
 
@@ -187,4 +203,8 @@ Este documento especifica os casos de teste referentes ao **Requisito Funcional 
 | * As explicações das regras de cálculo devem ser apresentadas com clareza em tela.
 
  |
+ | **Evidência** |
+| --- |
+| https://drive.google.com/file/d/1CtFW2LN8H2tDjZ21SBi7slmTf3wHspEZ/view?usp=sharing  |
+
 
