@@ -38,7 +38,7 @@ A estrutura está organizada por pastas, cada uma representando uma etapa da doc
 ↳ Relatório dos testes executados e resultados finais
 
 📁 **Evidências**
-↳ Prints e demais registros da execução dos testes
+↳ vídeos curtos da extensão Jam ou prints
 
 ---
 
