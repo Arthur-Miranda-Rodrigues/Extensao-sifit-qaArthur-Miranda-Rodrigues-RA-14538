@@ -3,8 +3,6 @@
 
 # Cenário de Teste: Página Inicial (Parte 4)
 
----
-
 ### Caso de Teste 01: Agendamento de Avaliação através de Ações Rápidas no Perfil do Cliente
 
 | ID  | Descrição |
