@@ -1,73 +1,128 @@
 
-
 ---
 
-# Cenário 03: Acesso e visualização do Dashboard.
+# Cenário de Teste: Acesso e visualização do Dashboard.
 
-### Caso de Teste 01: Acesso à tela de Dashboard.
+### Caso de Teste 01: Navegação para a Tela de Dashboard e Alternância Dinâmica de Cores ao Recarregar
 
 | ID | Descrição |
 | --- | --- |
-| **C02-CT01** | Verificar a navegação e a exibição correta da tela de Dashboard através do menu lateral do SIFIT. |
+| **C02-CT01** | Verificar o direcionamento para a tela "Dashboard" pelo menu lateral, a correta renderização dos painéis e o comportamento de alternância/mudança de tema de cores ao recarregar a página.
+
+ |
 
 | **Pré-condições** |
 | --- |
-| O usuário deve estar autenticado no sistema. |
+| Utilizador autenticado no sistema SIFIT.
+
+ |
 
 | **Passos** |
 | --- |
-| **DADO** que o usuário está autenticado no sistema |
-| **QUANDO** clicar na opção "Dashboard" do menu lateral principal |
-| **ENTÃO** a página de Dashboard deve ser carregada exibindo os gráficos, relatórios e o painel de Inteligência Sifit |
+| **DADO** que o utilizador está autenticado no SIFIT
+
+ |
+| **QUANDO** clicar no item "Dashboard" do menu lateral principal
+
+ |
+| **E** recarregar/atualizar a página do Dashboard (F5 / Refresh)
+
+ |
+| **ENTÃO** o sistema deve carregar a página de Dashboard (`/dashboard`), apresentando a alternância dinâmica na paleta de cores/tema dos gráficos e painéis a cada recarregamento, além de exibir o bloco de "Inteligência Sifit" e as métricas principais.
+
+ |
 
 | **Critérios de aceitação** |
 | --- |
-| A tela de Dashboard deve ser exibida corretamente ao ser selecionada no menu. |
+| O Dashboard deve ser carregado com sucesso pelo menu lateral e adaptar/alterar o tema de cores dos gráficos e componentes ao reiniciar/recarregar a página.
+
+ |
+
+| **Evidência** |
+| --- |
+| https://drive.google.com/file/d/1wB_CdpNSVpde0k2M5K2rhg7mAnFdX5_7/view?usp=sharing |
+
+
 
 ---
 
-### Caso de Teste 02: Navegação e interação com a Inteligência Sifit.
+### Caso de Teste 02: Interação com Gráficos Interativos e Exibição de Tooltips (Hover)
 
 | ID | Descrição |
 | --- | --- |
-| **C02-CT02** | Verificar o acesso à tela "Resultados da Inteligência" através do botão "Ver Inteligência" e a filtragem por período. |
+| **C02-CT02** | Validar a interatividade dos gráficos do Dashboard ao posicionar o cursor sobre as barras e seções, conferindo a exibição das etiquetas informativas (*tooltips*).
+
+ |
 
 | **Pré-condições** |
 | --- |
-| O usuário deve estar visualizando a tela de Dashboard. |
+| Utilizador posicionado na tela de Dashboard.
+
+ |
 
 | **Passos** |
 | --- |
-| **DADO** que o usuário está no Dashboard |
-| **QUANDO** clicar no botão "Ver Inteligência" no card de Inteligência Sifit |
-| **E** selecionar os filtros de período (ex: "Últimos 7 dias", "Últimos 30 dias") |
-| **ENTÃO** os dados de automações executadas, relatórios enviados, alunos em risco e demais métricas devem atualizar conforme o período selecionado |
+| **DADO** que o utilizador está visualizando a tela de Dashboard
+
+ |
+| **QUANDO** rolar a página e passar o cursor (*hover*) sobre as barras e seções dos diferentes gráficos (ex.: faixa etária *18 a 25*, gráfico de pizza *Masculino*, barras mensais de *Janeiro*, *Junho*, *Julho*, *Outubro*, *Novembro* e gráfico de distribuição por personal)
+
+ |
+| **ENTÃO** o sistema deve destacar a seção selecionada e exibir o balão explicativo (*tooltip*) contendo os rótulos e os valores exatos de cada métrica.
+
+ |
 
 | **Critérios de aceitação** |
 | --- |
-| O painel "Resultados da Inteligência" deve carregar e permitir a alternância de filtros temporal de forma funcional. |
+| Todos os elementos dos gráficos devem responder ao *hover* do mouse, renderizando os valores corretos em balões de informação interativos.
+
+ |
+
+| **Evidência** |
+| --- |
+| https://drive.google.com/file/d/13GSJspN11hIRllEf8oG5slC2UR2NOU54/view?usp=sharing |
 
 ---
 
-### Caso de Teste 03: Interação com os gráficos interativos do Dashboard.
+### Caso de Teste 03: Acesso ao Painel "Resultados da Inteligência" e Filtragem Temporal
 
 | ID | Descrição |
 | --- | --- |
-| **C02-CT03** | Verificar se os elementos gráficos do Dashboard respondem à passagem do cursor (*hover*) mostrando os detalhes das métricas. |
+| **C02-CT03** | Validar o acionamento do botão "Ver Inteligência" no card "Inteligência Sifit" e a atualização das métricas ao alternar os filtros de período temporal.
+
+ |
 
 | **Pré-condições** |
 | --- |
-| O usuário deve estar na tela de Dashboard. |
+| Utilizador na tela de Dashboard visualizando o card de Inteligência Sifit.
+
+ |
 
 | **Passos** |
 | --- |
-| **DADO** que o usuário está visualizando a tela de Dashboard |
-| **QUANDO** passar o cursor sobre as barras dos gráficos de clientes, gráfico de rosca de pagamentos ou modalidades |
-| **ENTÃO** o sistema deve exibir os balões de informação (*tooltips*) com os valores e categorias correspondentes |
+| **DADO** que o utilizador está na tela de Dashboard
+
+ |
+| **E** localiza o bloco "Inteligência Sifit"
+
+ |
+| **QUANDO** clicar no botão "Ver inteligência >"
+
+ |
+| **ENTÃO** o sistema deve redirecionar para a tela "Resultados da Inteligência"
+
+ |
+| **E** ao alternar entre os botões de filtro no canto superior direito (ex.: *Hoje*, *Últimos 7 dias*, *Últimos 30 dias*, *Últimos 90 dias*), as contagens de automações executadas, relatórios enviados, alunos em risco, aniversariantes e demais indicadores devem recalcular e atualizar dinamicamente na tela.
+
+ |
 
 | **Critérios de aceitação** |
 | --- |
-| Todos os gráficos interativos devem exibir os valores de cada seção ao passar o mouse sobre eles. |
+| O painel de Resultados da Inteligência deve ser aberto corretamente e responder com precisão aos comandos de seleção do filtro temporal.
 
+ |
 
-https://jam.dev/c/5c1713ea-159f-4087-9e02-38767a30c1e6 
+| **Evidência** |
+| --- |
+| https://drive.google.com/file/d/1jHxBStstB3JBHW8RBBCIF0m5EY6yqBwt/view?usp=sharing |
+
