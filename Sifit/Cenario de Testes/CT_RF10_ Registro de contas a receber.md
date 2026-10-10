@@ -1,4 +1,3 @@
-Aqui está a versão reformulada dos cenários de teste referente ao **RF07 - Registro e Gestão de Contas a Receber**, padronizada no formato **BDD/Gherkin** (mesmo padrão utilizado nas respostas anteriores), mantendo a clareza, rastreabilidade e estrutura técnica para a sua documentação de QA:
 
 ---
 
